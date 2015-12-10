@@ -19,10 +19,12 @@ int T4posX = 710;
 int T4posXX = 715;
 int T4posXXX = 722;
 
+//movement speed of the ghost
 int movementSize = 2;
 
 int textOpacity = 0;
 
+//boolean for the two different states
 boolean mState = false;
 
 void setup(){
@@ -140,10 +142,12 @@ void draw(){
   
  
   update();
+  //second scene
   } else {
     background(0);
     fill(0);
     for (int x=1; x < 50; x++){
+    //create random colors
        fill(random(255), random(255), random(255));
       textSize(45);
       text("Happy Halloween!    Happy Halloween!    Happy Halloween!", (x + 50), (x * 50));
@@ -161,6 +165,7 @@ void update(){
   } else if (RAposX < (rectWidth/2)){
     movementSize = movementSize * -1;
   }
+  //moving all the pieces of the ghost with the correct speed
   RAposX = RAposX + movementSize;
   E1posX = E1posX + movementSize;
   E2posX = E2posX + movementSize;
