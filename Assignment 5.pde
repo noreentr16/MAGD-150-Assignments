@@ -33,6 +33,7 @@ void setup(){
 }
 
 void draw(){
+//first scene 
   if (mState == false){
   //Moon
   fill(200, 106, 21);
@@ -45,6 +46,7 @@ void draw(){
   fill(243, 228, 184);
   ellipse(700, 500, 700, 700);
   
+  //set up a text opacity for when ghost crosses the person to have the text appear
   fill(0, 0, 0, textOpacity);
   textSize(25);
   text("AHHhhh!", 925, 435);
@@ -61,6 +63,8 @@ void draw(){
   rectMode(CORNERS);
   fill(0);
   rect(0, 600, 1400, 800);
+  
+  //tree
   
   //tree base
   stroke(0);
@@ -107,6 +111,7 @@ void draw(){
   line(170, 193, 225, 180);
   line(50, 280, 20, 305);
   line(155, 300, 175, 330);
+  //end of tree
   
   //ghost
   rectMode(CENTER);
