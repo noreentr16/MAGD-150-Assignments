@@ -124,6 +124,7 @@ void draw () {
   rect(270, 80, 235, 185);
   
   //rim base
+  //have the rim base be behind the basketball so that the basketball appears to go in the hoop
   fill(250, 77, 37);
   rectMode(CORNERS);
   rect(360, 275, 420, 310);
@@ -135,6 +136,7 @@ void draw () {
   fill(191, 92, 11);
   strokeWeight(1);
   stroke(0);
+  //have basketball follow the mouse
   ellipse(mouseX, mouseY, 100, 100);
   fill(243, 122, 22);
   arc(mouseX, mouseY, 100, 100, 0, PI);
@@ -145,6 +147,7 @@ void draw () {
   
   
     //net
+    //use line work to create the net
   strokeWeight(6);
   stroke(206, 205, 198);
   line(315, 285, 330, 320);
@@ -182,6 +185,7 @@ void draw () {
   line(450, 400, 450, 420);
   
  //rim
+ //have front of rim in front of basketball so as to have the basketball appear to go into the hoop
   stroke(0,0,0);
   strokeWeight(5);
   fill(250, 77, 37);
