@@ -1075,13 +1075,14 @@ void draw(){
 void mousePressed(){
   mState = !mState;
 }
-
+//movement of ghost
 void update(){
   if(RAposX + (rectWidth/2) > width){
     movementSize = movementSize * -1;
   } else if (RAposX < (rectWidth/2)){
     movementSize = movementSize * -1;
   }
+  //move all pieces of the ghost
   RAposX = RAposX + movementSize;
   E1posX = E1posX + movementSize;
   E2posX = E2posX + movementSize;
@@ -1101,7 +1102,7 @@ void update(){
   </script>
   <canvas id="mycanvas3"></canvas>
   
-  <h1><center>Assignment Six- Theme is Food- press r, g, or b for interaction</center></h1>
+  <h1><center>Assignment Six- Theme is Food- press r, g, or b for interaction- mouse click to change scene</center></h1>
   <script type="text/processing" data-processing-target="mycanvas5">
  
   //movement speed of character
