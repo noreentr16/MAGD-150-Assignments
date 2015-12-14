@@ -55,7 +55,7 @@ boolean hit8 = false;
 void setup() {
   size(1400, 800);
   crosshairs = loadImage ("Crosshairs.png"); 
-  screen = loadImage ("ColorizeScreen.jpg");
+  screen = loadImage ("https://cloud.githubusercontent.com/assets/16195601/11788616/95a2cf8a-a257-11e5-8f08-9f2d5b80f2d0.jpg");
   colorful = loadImage ("Colorful.jpg");
   player = new PVector(width/2, height/2);
   myTimer = new Timer(9000);
