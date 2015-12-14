@@ -1,7 +1,9 @@
+//movement speed of character
 float movementSize = 1;
 
 int head = 20;
 
+//character positions
 float posX = 370;
 int posY = 500;
 float posX2 = 375;
@@ -10,6 +12,7 @@ float posX3 = 365;
 boolean leg = true;
 boolean mState = false;
 
+//variables for the leg opacities to make it appear as if character's legs are moving
 int legOpac = 255;
 int legOpac2 = 0;
 int legOpac3 = 255;
@@ -20,6 +23,8 @@ float posXarm2 = 360;
 int ground = 560;
 int textOpac1 = 255;
 int textOpac2 = 0;
+
+//setup background to change colors for interaction
 int backcolor1 = 255;
 int backcolor2 = 255;
 int backcolor3 = 255;
@@ -29,6 +34,7 @@ void setup(){
 }
 
 void draw(){
+//first scene
   if (mState == false){
   
   stroke(0);
@@ -101,20 +107,25 @@ void draw(){
   }
 }
 void keyPressed(){
+//set up a non case sensitve interaction to change screen to be blue
   if (key == 'b' || key == 'B') {
   backcolor1 = 255;
   backcolor2 = 0;
   backcolor3 = 0;
+  //set up a non case sensitve interaction to change screen to be green
   } else if (key == 'g' || key == 'G') {
     backcolor1 = 0;
     backcolor2 = 255;
     backcolor3 = 0;
+    //set up a non case sensitve interaction to change screen to be red
   } else if (key =='r' || key == 'R') {
     backcolor3 = 255;
     backcolor2 = 0;
     backcolor1 = 0;
   }
 }
+
+//mouse click changes the scene
 void mousePressed(){
   background(255);
   mState = !mState;
@@ -129,6 +140,7 @@ void textChange(){
     textOpac2 = 0;
   }
 }
+//execute legs illusion of movement
 void legMovement(){
   if (posX % 2 == 0){
     legOpac = 0;
@@ -138,12 +150,14 @@ void legMovement(){
     legOpac2 = 0;
   }
 }
+//character's movement
 void update(){
   if(posX + (head/2) > width){
     movementSize = movementSize * -1;
   } else if (posX < (head/2)){
     movementSize = movementSize * -1;
   }
+  //carry all pieces of char with movement
   posX = posX + movementSize;
   posX2 = posX2 + movementSize;
   posX3 = posX3 + movementSize;
@@ -151,7 +165,7 @@ void update(){
   posXarm = posXarm + movementSize;
   posXarm2 = posXarm2 + movementSize;
 }
-
+//second scene- random location of generated pizza forms
 void drawPizza(){
   int centerX = round(random(width));
   int centerY = round(random(height));
